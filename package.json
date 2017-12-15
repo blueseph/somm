@@ -1,0 +1,58 @@
+{
+  "name": "@mise/router",
+  "version": "1.0.0",
+  "description": "router templates for for @mise/core",
+  "main": "dist/mise-router.js",
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "test:watch": "jest --coverage --watchAll",
+    "build": "webpack --optimize-minimize",
+    "build:unoptimized": "webpack",
+    "lint": "eslint ./src/",
+    "lint:fix": "eslint ./src/ --fix",
+    "start": "npm run lint && npm run test && npm run build",
+    "prepublishOnly": "npm start"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "author": "dan b.",
+  "license": "MIT",
+  "dependencies": {
+    "path-to-regexp": "^2.1.0"
+  },
+  "peerDependencies": {
+    "@mise/core": "^3.1.5"
+  },
+  "devDependencies": {
+    "@mise/core": "^3.1.5",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "jest": "^21.2.1",
+    "webpack": "^3.10.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components"
+    ]
+  }
+}

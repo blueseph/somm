@@ -1,0 +1,32 @@
+{
+    "env": {
+        "jest": true,
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": "airbnb",
+    "rules": {
+      "no-param-reassign": "off", /* reduce reassigns params */
+      "import/prefer-default-export": "off", /* named exports allow for treeshaking */
+      "no-restricted-syntax": [ /* we're omitting for of loops for this. they're pretty neat! */
+        "error",
+        {
+          "selector": "ForInStatement",
+          "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+        },
+        {
+          "selector": "LabeledStatement",
+          "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+        },
+        {
+          "selector": "WithStatement",
+          "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+        }
+      ],
+      "linebreak-style": "off", /* we accept those of all line endings */
+      "jsx-a11y/anchor-is-valid": "off", /* this throws for some reason */
+      "react/prop-types": "off", /* we dont deal with proptypes, sorry */
+      "react/react-in-jsx-scope": "off" /* sadly we're not react */
+    }
+}
