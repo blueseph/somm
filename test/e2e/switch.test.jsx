@@ -1,7 +1,7 @@
 import { dom, component } from '@mise/core';
 import { commis } from '@mise/test';
 
-import { Route, init, commisRouteUpdateAction } from '../../src/index';
+import { Route, Switch, init, commisRouteUpdateAction } from '../../src/index';
 
 import { setLocation } from '../utils';
 
@@ -18,12 +18,12 @@ describe('basic example of routing', () => {
 
     component({
       template: () => () => (
-        <div>
+        <Switch>
           <Route path="/users/" template={TemplateB} exact />
           <Route path="/users/:id" template={TemplateC} exact />
 
           <Route template={TemplateA} />
-        </div>
+        </Switch>
       ),
       state: {},
       actions: {
@@ -36,11 +36,11 @@ describe('basic example of routing', () => {
   });
 
   it('should display the catchall route', () => {
-    expect(document.body.innerHTML).toEqual('<div><article></article></div>');
+    expect(document.body.innerHTML).toEqual('<article></article>');
   });
 
   it('should display the users route route', async () => {
-    expect(document.body.innerHTML).toEqual('<div><article></article></div>');
+    expect(document.body.innerHTML).toEqual('<article></article>');
 
     setLocation('/users/');
     await render();

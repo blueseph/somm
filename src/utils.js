@@ -14,9 +14,6 @@ const match = ({ path = '/', current, ...options }) => {
   const regex = pathToRegexp(path, keys, optionsWithDefaults);
   const matched = regex.exec(current);
 
-  console.log({path});
-  console.log({matched});
-
   if (!matched) {
     return result;
   }

@@ -1,21 +1,10 @@
-const setLocation = value =>
+const setLocation = (value) => {
   Object.defineProperty(window.location, 'pathname', {
     writable: true,
     value,
   });
 
-const requestAnimationFrame = setTimeout;
-
-const requestIdleCallback = function ric(cb) {
-  const start = Date.now();
-  return setTimeout(() => {
-    cb({
-      didTimeout: false,
-      timeRemaining() {
-        return Math.max(0, 50 - (Date.now() - start));
-      },
-    });
-  }, 1);
+  document.dispatchEvent(new Event('popstate'));
 };
 
-export { setLocation, requestAnimationFrame, requestIdleCallback };
+export { setLocation };
