@@ -8,7 +8,7 @@ describe('router', () => {
   const state = { a: 1 };
   const actions = { noop: () => {} };
 
-  const template = (props, children) => (<div {...props}>{children}</div>);
+  const template = (props, children) => <div {...props}>{children}</div>;
 
   beforeEach(() => {
     setLocation('/users/123');

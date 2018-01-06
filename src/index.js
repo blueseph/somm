@@ -1,7 +1,8 @@
-export { Switch } from './templates/switch';
-export { Route } from './templates/route';
-export { Redirect } from './templates/redirect';
 export { Link } from './templates/link';
+export { Redirect } from './templates/redirect';
+export { Route } from './templates/route';
+export { Switch } from './templates/switch';
 
-export { commisRouteUpdateAction } from './action';
 export { init } from './init';
+export { commisRouteUpdateAction } from './action';
+
