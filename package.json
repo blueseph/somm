@@ -10,7 +10,8 @@
     "build:unoptimized": "webpack",
     "lint": "eslint ./src/",
     "lint:fix": "eslint ./src/ --fix",
-    "start": "npm run lint && npm run test && npm run build"
+    "start": "npm run lint && npm run build",
+    "prepublishOnly": "npm start"
   },
   "files": [
     "src",
