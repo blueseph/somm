@@ -1,6 +1,6 @@
 {
   "name": "@mise/router",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "router templates for for @mise/core",
   "main": "dist/mise-router.js",
   "scripts": {
