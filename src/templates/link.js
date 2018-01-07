@@ -8,7 +8,7 @@ const Link = ({ to = '#', state = {} }, children) => dom(
       e.preventDefault();
 
       if (window.location.pathname !== to) {
-        window.pushState(state, '', to);
+        window.history.pushState(state, '', to);
       }
     },
   },
