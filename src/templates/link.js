@@ -9,6 +9,7 @@ const Link = ({ to = '#', state = {} }, children) => dom(
 
       if (window.location.pathname !== to) {
         window.history.pushState(state, '', to);
+        document.dispatchEvent(new Event('somm-pushstate'));
       }
     },
   },
