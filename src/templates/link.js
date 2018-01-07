@@ -1,6 +1,6 @@
 import { dom } from '@mise/core';
 
-const Link = ({ to = '#', state = {} }, children) => dom(
+const Link = ({ to = '#', state = {}, ...rest }, children) => dom(
   'a',
   {
     href: to,
@@ -12,6 +12,7 @@ const Link = ({ to = '#', state = {} }, children) => dom(
         document.dispatchEvent(new Event('somm-pushstate'));
       }
     },
+    rest,
   },
   children,
 );
