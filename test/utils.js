@@ -4,7 +4,7 @@ const setLocation = (value) => {
     value,
   });
 
-  document.dispatchEvent(new Event('popstate'));
+  document.dispatchEvent(new Event('somm-pushstate'));
 };
 
 export { setLocation };

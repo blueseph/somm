@@ -23,10 +23,10 @@
     "path-to-regexp": "^2.1.0"
   },
   "peerDependencies": {
-    "@mise/core": "^3.4.0"
+    "@mise/core": "^3.4.1"
   },
   "devDependencies": {
-    "@mise/core": "^3.4.0",
+    "@mise/core": "^3.4.1",
     "@mise/test": "^1.0.3",
     "babel-core": "^6.26.0",
     "babel-jest": "^21.2.0",
