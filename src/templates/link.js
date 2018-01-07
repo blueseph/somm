@@ -4,6 +4,7 @@ const Link = ({ to = '#', state = {}, ...rest }, children) => dom(
   'a',
   {
     href: to,
+    ...rest,
     onclick(e) {
       e.preventDefault();
 
@@ -12,7 +13,6 @@ const Link = ({ to = '#', state = {}, ...rest }, children) => dom(
         document.dispatchEvent(new Event('somm-pushstate'));
       }
     },
-    rest,
   },
   children,
 );
