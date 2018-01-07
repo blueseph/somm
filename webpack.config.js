@@ -29,9 +29,4 @@ module.exports = {
       },
     ],
   },
-
-  externals: {
-    '@mise/core': 'mise',
-    core: 'mise',
-  },
 };
