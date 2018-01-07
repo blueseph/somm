@@ -1,7 +1,5 @@
 const init = () => (actions) => {
-  document.addEventListener('popstate', () => {
-    actions.commisRouteUpdateAction();
-  });
+  window.onpopstate = actions.commisRouteUpdateAction;
 };
 
 export { init };
