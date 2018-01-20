@@ -12,6 +12,8 @@ const Link = ({ to = '#', state = {}, ...rest }, children) => dom(
         window.history.pushState(state, '', to);
         document.dispatchEvent(new Event('somm-pushstate'));
       }
+
+      if (rest.onclick) rest.onclick(e);
     },
   },
   children,

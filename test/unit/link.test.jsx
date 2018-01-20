@@ -47,4 +47,21 @@ describe('link', () => {
 
     expect(window.pushState).not.toHaveBeenCalled();
   });
+
+  it('should try to run an onclick if one is provided in addition to owns its own onclick', () => {
+    const to = '/users/';
+    const preventDefault = jest.fn();
+    const onclick = jest.fn();
+    const event = { preventDefault };
+
+    setLocation('/users/');
+
+    window.pushState = jest.fn();
+
+    const link = <Link to={to} onclick={onclick}/>;
+
+    link.props.onclick(event);
+
+    expect(onclick).toHaveBeenCalled();
+  })
 });
